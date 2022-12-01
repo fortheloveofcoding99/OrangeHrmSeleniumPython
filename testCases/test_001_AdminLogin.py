@@ -1,9 +1,10 @@
 import time
 from pageObjects.HomePage import HomePage # importing the UI elements of OrangeHrm homepage
 import os
+from utilities.readProperties import ReadConfig
 
 class Test_001_adminLogin:
-    baseURL= 'https://opensource-demo.orangehrmlive.com/web/index.php/auth/login'
+    baseURL= ReadConfig.getApplicationUrl()
 
     def test_login(self,setup): # setup method is present in fixtures in initiate the driver from webDriverManager
         self.driver = setup
