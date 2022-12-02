@@ -8,7 +8,7 @@ class ReadConfig:
 
     @staticmethod
     def getApplicationUrl():
-        url=config.get('commonInfo','baseUrl')
+        url=config.get('commonInfo','baseUrl') # name inside the config.ini file 'commoon info' and ke baseUrl
         return url
 
     @staticmethod

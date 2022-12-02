@@ -5,6 +5,9 @@ class Dashboard:
     navBar_Dashbod_xpath = "//span[text()='Dashboard']"
     navBar_PIM_xpath= "//span[text()='PIM']"
 
+    def __init__(self, driver):
+        self.driver = driver
+
     def clickAdminTab(self):
         self.driver.find_element(By.XPATH,self.navBar_Admin_xpath).click()
 
