@@ -10,6 +10,8 @@ class HomePage:
     linkText_forgotPass_xpath="//p[text()='Forgot your password? ']"
     btn_resetPassword_xpath="//button[@type='submit']"
     text_passwordResetMessage_xpath="//h6[contains(@class,'orangehrm-forgot-password-title')]"
+    header_dasboard_xpath="//h6[contains(@class,'topbar-header-breadcrumb-module')]"
+
     def __init__(self, driver):
         self.driver = driver
 
@@ -36,3 +38,10 @@ class HomePage:
         except:
             None
 
+    def checkHeader(self):
+        try:
+            self.driver.find_element(By.XPATH,self.header_dasboard_xpath).is_displayed()
+            print('************************************************************************************')
+        except:
+            print('$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$')
+            return False

@@ -1,3 +1,4 @@
+import pytest
 from pageObjects.Dashboard import Dashboard #importing the UI elements of OrangeHrm Dashboard
 from pageObjects.HomePage import HomePage # importing the UI elements of OrangeHrm homepage
 from pageObjects.PimPage import PimPage
@@ -7,6 +8,7 @@ from utilities import XlUtils
 class Test_002_addEmployee:
     baseURL = ReadConfig.getApplicationUrl()  # static method declaration in readProperties file
 
+    @pytest.mark.sanity
     def test_addEmployee(self,setup): # setup method is present in fixtures in initiate the driver from webDriverManager
         self.driver = setup
         self.driver.get(self.baseURL)

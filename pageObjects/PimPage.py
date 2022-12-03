@@ -11,6 +11,8 @@ class PimPage:
     input_angstellterId_xpath = "(//input[contains(@class,'oxd-input--active')])[5]"
     input_image_xpath = "//button[contains(@class,'employee-image-action')]"
     btn_erstenSave_xpath = "//button[@type='submit']"
+    link_addEmp_xpath = "//a[text()='Add Employee']"
+    link_addjob_xpath = "//a[text()='Job']"
     # image ='C:/Users/befor/Downloads/oraange.jpg'
     # file = 'C:/Users/befor/PycharmProjects/OpenCartV1_Selenium_Python/Book1.xlsx'
     # rows = XlUtils.getRowCount(file, 'EmpAdd')
@@ -40,4 +42,10 @@ class PimPage:
 
     def erstenSpeichern(self):
         self.driver.find_element(By.XPATH,self.btn_erstenSave_xpath).click()
+
+    def sichrer_arbeit(self):
+        pass
+
+    def nachste_angstellter(self):
+        self.driver.find_element(By.XPATH,self.link_addEmp_xpath).click()
 

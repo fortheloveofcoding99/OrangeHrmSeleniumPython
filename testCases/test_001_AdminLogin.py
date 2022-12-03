@@ -1,4 +1,6 @@
 import time
+
+import pytest
 from pageObjects.HomePage import HomePage # importing the UI elements of OrangeHrm homepage
 import os
 from utilities.readProperties import ReadConfig
@@ -8,6 +10,7 @@ class Test_001_adminLogin:
     baseURL= ReadConfig.getApplicationUrl() # static method declaration in readProperties file
     loggr = LogGenerate.loggen() # for logging
 
+    @pytest.mark.sanity
     def test_login(self,setup): # setup method is present in fixtures in initiate the driver from webDriverManager
         self.loggr.info("$$$login test case started$$$")
         self.driver = setup
@@ -19,10 +22,12 @@ class Test_001_adminLogin:
         self.hp.enterUserName()
         self.hp.enterPassword()
         self.hp.clickLogin()
+        time.sleep(2)
+        self.hp.checkHeader()
         self.driver.close()
         self.loggr.info("$$$login test case ended$$$")
 
-
+    @pytest.mark.regression
     def test_forgot_password(self,setup):
         self.loggr.info("$$$forgot Password test case started$$$")
         self.driver = setup
