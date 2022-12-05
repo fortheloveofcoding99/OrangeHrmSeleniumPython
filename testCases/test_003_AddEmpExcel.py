@@ -39,7 +39,7 @@ class Test_002_addEmployee:
             self.pp.hinzfugenAngstellterId(self.ausweis)
             self.pp.erstenSpeichern()
             self.pp.nachste_angstellter()
-
+        self.driver.close()
 
 
 
