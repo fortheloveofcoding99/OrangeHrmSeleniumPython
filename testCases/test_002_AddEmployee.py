@@ -5,6 +5,8 @@ from pageObjects.PimPage import PimPage
 import os
 from utilities.readProperties import ReadConfig
 from utilities import XlUtils
+
+#@pytest.mark.usefixtures('setup')
 class Test_002_addEmployee:
     baseURL = ReadConfig.getApplicationUrl()  # static method declaration in readProperties file
 

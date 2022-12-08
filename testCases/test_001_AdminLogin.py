@@ -4,15 +4,16 @@ import pytest
 from pageObjects.HomePage import HomePage # importing the UI elements of OrangeHrm homepage
 import os
 from utilities.readProperties import ReadConfig
-from utilities.customLogger import LogGenerate
+from utilities.BaseClass import BaseClass
 
-class Test_001_adminLogin:
+class Test_001_adminLogin(BaseClass):
     baseURL= ReadConfig.getApplicationUrl() # static method declaration in readProperties file
-    loggr = LogGenerate.loggen() # for logging
+
 
     @pytest.mark.sanity
     def test_login(self,setup): # setup method is present in fixtures in initiate the driver from webDriverManager
-        self.loggr.info("$$$login test case started$$$")
+        log = self.getLogger()
+        log.info("$$$login test case started$$$")
         self.driver = setup
         self.driver.get(self.baseURL)
         self.driver.maximize_window()
@@ -25,11 +26,12 @@ class Test_001_adminLogin:
         time.sleep(2)
         self.hp.checkHeader()
         self.driver.close()
-        self.loggr.info("$$$login test case ended$$$")
+        log.info("$$$login test case ended$$$")
 
     @pytest.mark.regression
     def test_forgot_password(self,setup):
-        self.loggr.info("$$$forgot Password test case started$$$")
+        log = self.getLogger()
+        log.info("$$$forgot Password test case started$$$")
         self.driver = setup
         self.driver.get(self.baseURL)
         self.driver.maximize_window()
@@ -48,4 +50,4 @@ class Test_001_adminLogin:
             self.driver.save_screenshot(os.getcwd()+"//forgot_password.png")
             self.driver.close()
             assert False
-        self.loggr.info("$$$forgot password test case ended$$$")
+        log.info("$$$forgot password test case ended$$$")
