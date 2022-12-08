@@ -10,3 +10,11 @@
 2022-12-08 10:07:37,986 :INFO :utilities.BaseClass :$$$forgot Password test case started$$$
 2022-12-08 10:07:51,724 :INFO :utilities.BaseClass :$$$forgot password test case ended$$$
 2022-12-08 10:07:51,724 :INFO :utilities.BaseClass :$$$forgot password test case ended$$$
+2022-12-08 11:13:44,782 :INFO :test_login :$$$login test case started$$$
+2022-12-08 11:13:51,057 :INFO :test_login :$$$login test case ended$$$
+2022-12-08 11:13:54,325 :INFO :test_forgot_password :$$$forgot Password test case started$$$
+2022-12-08 11:14:05,312 :INFO :test_forgot_password :$$$forgot password test case ended$$$
+2022-12-08 11:23:41,846 :INFO :test_login :$$$login test case started$$$
+2022-12-08 11:23:50,094 :INFO :test_login :$$$login test case ended$$$
+2022-12-08 11:23:53,371 :INFO :test_forgot_password :$$$forgot Password test case started$$$
+2022-12-08 11:24:03,671 :INFO :test_forgot_password :$$$forgot password test case ended$$$
