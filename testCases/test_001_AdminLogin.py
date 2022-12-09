@@ -6,6 +6,7 @@ import os
 from utilities.readProperties import ReadConfig
 from utilities.BaseClass import BaseClass
 
+
 class Test_001_adminLogin(BaseClass):
     baseURL= ReadConfig.getApplicationUrl() # static method declaration in readProperties file
 
@@ -16,8 +17,6 @@ class Test_001_adminLogin(BaseClass):
         log.info("$$$login test case started$$$")
         self.driver = setup
         self.driver.get(self.baseURL)
-        self.driver.maximize_window()
-        self.driver.implicitly_wait(5)
 
         self.hp = HomePage(self.driver) # creating an object of the home page class and passing the driver method
         self.hp.enterUserName()
@@ -34,8 +33,6 @@ class Test_001_adminLogin(BaseClass):
         log.info("$$$forgot Password test case started$$$")
         self.driver = setup
         self.driver.get(self.baseURL)
-        self.driver.maximize_window()
-        self.driver.implicitly_wait(5)
 
         self.hp = HomePage(self.driver)  # creating an object of the home page class and passing the driver method
         self.hp.clickForgotPassword()

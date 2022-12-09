@@ -5,17 +5,16 @@ from pageObjects.PimPage import PimPage
 import os
 from utilities.readProperties import ReadConfig
 from utilities import XlUtils
+from utilities.BaseClass import BaseClass
 
-#@pytest.mark.usefixtures('setup')
-class Test_002_addEmployee:
+
+class Test_002_addEmployee(BaseClass):
     baseURL = ReadConfig.getApplicationUrl()  # static method declaration in readProperties file
 
     @pytest.mark.sanity
     def test_addEmployee(self,setup): # setup method is present in fixtures in initiate the driver from webDriverManager
         self.driver = setup
         self.driver.get(self.baseURL)
-        self.driver.maximize_window()
-        self.driver.implicitly_wait(5)
 
         self.hp = HomePage(self.driver)  # creating an object of the home page class and passing the driver method
         self.hp.enterUserName()

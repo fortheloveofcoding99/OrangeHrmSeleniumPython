@@ -6,8 +6,9 @@ import os
 from utilities.readProperties import ReadConfig
 from utilities.customLogger import LogGenerate
 from utilities import XlUtils
+from utilities.BaseClass import BaseClass
 
-class Test_002_addEmployee:
+class Test_003_addEmployee(BaseClass):
     baseURL = ReadConfig.getApplicationUrl()  # static method declaration in readProperties file
     loggr = LogGenerate.loggen()  # for logging
     file = 'C:/Users/befor/PycharmProjects/OpenCartV1_Selenium_Python/testData/Book1.xlsx'
@@ -15,8 +16,7 @@ class Test_002_addEmployee:
     def test_addEmpExcel(self,setup): # setup method is present in fixtures in initiate the driver from webDriverManager
         self.driver = setup
         self.driver.get(self.baseURL)
-        self.driver.maximize_window()
-        self.driver.implicitly_wait(5)
+
         self.image ='C:/Users/befor/Downloads/oraange.jpg'
         self.rows = XlUtils.getRowCount(self.file, 'EmpAdd')
 
