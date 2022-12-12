@@ -13,6 +13,7 @@ class Test_002_addEmployee(BaseClass):
 
     @pytest.mark.sanity
     def test_addEmployee(self,setup): # setup method is present in fixtures in initiate the driver from webDriverManager
+        log = self.getLogger()
         self.driver = setup
         self.driver.get(self.baseURL)
 
@@ -29,3 +30,4 @@ class Test_002_addEmployee(BaseClass):
         self.pp.hinzfugenFoto('C:/Users/befor/PycharmProjects/OpenCartV1_Selenium_Python/oraange.jpg')
         self.pp.hinzfugenAngstellterId(2129)
         self.pp.erstenSpeichern()
+        self.elementVisible(self.pp.text_verifyEmp_xpath)

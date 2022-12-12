@@ -1,6 +1,10 @@
 import inspect
 import logging
 import pytest
+from selenium.webdriver.common.by import By
+from selenium.webdriver.support import expected_conditions as EC
+from selenium.webdriver.support.ui import WebDriverWait
+
 
 @pytest.mark.usefixtures('setup')
 class BaseClass:
@@ -13,3 +17,7 @@ class BaseClass:
          logger.addHandler(fileHandlr)
          logger.setLevel(logging.INFO) # setting the level of logging
          return logger
+
+    def elementVisible(self, loc):
+        element = WebDriverWait(self.driver, 10).until(EC.visibility_of_element_located((By.XPATH, loc)))
+        return element

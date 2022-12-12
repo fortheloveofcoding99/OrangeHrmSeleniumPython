@@ -13,6 +13,7 @@ class PimPage:
     btn_erstenSave_xpath = "//button[@type='submit']"
     link_addEmp_xpath = "//a[text()='Add Employee']"
     link_addjob_xpath = "//a[text()='Job']"
+    text_verifyEmp_xpath = "//h6[text()='Heidi Klum']"
     # image ='C:/Users/befor/Downloads/oraange.jpg'
     # file = 'C:/Users/befor/PycharmProjects/OpenCartV1_Selenium_Python/Book1.xlsx'
     # rows = XlUtils.getRowCount(file, 'EmpAdd')
@@ -48,4 +49,6 @@ class PimPage:
 
     def nachste_angstellter(self):
         self.driver.find_element(By.XPATH,self.link_addEmp_xpath).click()
+
+
 
