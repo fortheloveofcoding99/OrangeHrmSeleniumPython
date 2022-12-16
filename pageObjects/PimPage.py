@@ -1,7 +1,10 @@
+import time
+
 from selenium.webdriver.common.by import By
 from utilities.randomInt import random_number_generate
 from utilities import XlUtils
-
+from selenium import webdriver
+from selenium.webdriver.common.keys import Keys
 
 class PimPage:
     btn_add_xpath = "//button[text()=' Add ']"
@@ -14,6 +17,12 @@ class PimPage:
     link_addEmp_xpath = "//a[text()='Add Employee']"
     link_addjob_xpath = "//a[text()='Job']"
     text_verifyEmp_xpath = "//h6[text()='Heidi Klum']"
+    dropdown_jobTitle_xpath ="//div[@class='oxd-select-text-input']"
+    dropdown_jobCategory_xpath = "(//div[@class='oxd-select-text-input'])[2]"
+    dropdown_jobUnit_xpath = "(//div[@class='oxd-select-text-input'])[3]"
+    dropdown_joblocation_xpath = "(//div[@class='oxd-select-text-input'])[4]"
+    dropdown_jobEmpStat_xpath = "(//div[@class='oxd-select-text-input'])[5]"
+
     # image ='C:/Users/befor/Downloads/oraange.jpg'
     # file = 'C:/Users/befor/PycharmProjects/OpenCartV1_Selenium_Python/Book1.xlsx'
     # rows = XlUtils.getRowCount(file, 'EmpAdd')
@@ -49,6 +58,22 @@ class PimPage:
 
     def nachste_angstellter(self):
         self.driver.find_element(By.XPATH,self.link_addEmp_xpath).click()
+
+    def berufzeichsnung(self):
+        self.driver.find_element(By.XPATH,self.link_addjob_xpath).click()
+        time.sleep(2)
+        drop_down = []
+        drop_down.append(self.driver.find_element(By.XPATH,self.dropdown_jobTitle_xpath))
+        drop_down.append(self.driver.find_element(By.XPATH,self.dropdown_jobCategory_xpath))
+        drop_down.append(self.driver.find_element(By.XPATH,self.dropdown_jobUnit_xpath))
+        drop_down.append(self.driver.find_element(By.XPATH,self.dropdown_joblocation_xpath))
+        drop_down.append(self.driver.find_element(By.XPATH, self.dropdown_jobEmpStat_xpath))
+        for drop_down_element in drop_down:
+            drop_down_element.click()
+            drop_down_element.send_keys(Keys.DOWN)
+            time.sleep(1)
+            drop_down_element.send_keys(Keys.RETURN)
+            time.sleep(1)
 
 
 

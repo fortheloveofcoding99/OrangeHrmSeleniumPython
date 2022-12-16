@@ -4,7 +4,18 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="12d61acc-4490-47e5-89f9-10eef5039175" name="Changes" comment="adding explicit wait utility" />
+    <list default="true" id="12d61acc-4490-47e5-89f9-10eef5039175" name="Changes" comment="adding explicit wait utility">
+      <change afterPath="$PROJECT_DIR$/reports/16-12-2022 08-02-10.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/reports/16-12-2022 08-03-36.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/reports/16-12-2022 08-07-29.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/reports/16-12-2022 08-17-53.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pageObjects/PimPage.py" beforeDir="false" afterPath="$PROJECT_DIR$/pageObjects/PimPage.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/testCases/test_002_AddEmployee.py" beforeDir="false" afterPath="$PROJECT_DIR$/testCases/test_002_AddEmployee.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/utilities/BaseClass.py" beforeDir="false" afterPath="$PROJECT_DIR$/utilities/BaseClass.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/utilities/WebDriverWait.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/utilities/dropdowns.py" beforeDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -174,7 +185,14 @@
       <option name="project" value="LOCAL" />
       <updated>1670833765757</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="adding explicit wait utility">
+      <created>1670833847356</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1670833847356</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="UnknownFeatures">

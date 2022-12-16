@@ -31,3 +31,5 @@ class Test_002_addEmployee(BaseClass):
         self.pp.hinzfugenAngstellterId(2129)
         self.pp.erstenSpeichern()
         self.elementVisible(self.pp.text_verifyEmp_xpath)
+        self.pp.berufzeichsnung()
+        self.pp.erstenSpeichern()

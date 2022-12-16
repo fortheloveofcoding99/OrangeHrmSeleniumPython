@@ -4,7 +4,7 @@ import pytest
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.support.ui import WebDriverWait
-
+from selenium.webdriver.support.select import Select
 
 @pytest.mark.usefixtures('setup')
 class BaseClass:
@@ -21,3 +21,7 @@ class BaseClass:
     def elementVisible(self, loc):
         element = WebDriverWait(self.driver, 10).until(EC.visibility_of_element_located((By.XPATH, loc)))
         return element
+
+    def selectOptionByText(self,loc,text):
+        sel = Select(loc)
+        sel.select_by_visible_text(text)
