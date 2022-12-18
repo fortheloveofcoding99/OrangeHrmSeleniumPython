@@ -33,3 +33,6 @@ class Test_002_addEmployee(BaseClass):
         self.elementVisible(self.pp.text_verifyEmp_xpath)
         self.pp.berufzeichsnung()
         self.pp.erstenSpeichern()
+        self.pp.berichteAn('Cecil')
+        self.pp.erstenSpeichern()
+

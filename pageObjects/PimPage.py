@@ -22,6 +22,10 @@ class PimPage:
     dropdown_jobUnit_xpath = "(//div[@class='oxd-select-text-input'])[3]"
     dropdown_joblocation_xpath = "(//div[@class='oxd-select-text-input'])[4]"
     dropdown_jobEmpStat_xpath = "(//div[@class='oxd-select-text-input'])[5]"
+    link_reportTo_xpath = "//a[text()='Report-to']"
+    btn_managerAdd_xpath = "(//button[@type='button'])[2]"
+    input_manager_xpath = "//input[@placeholder='Type for hints...']"
+    dropdown_reportMethod_xpath = "//div[@class='oxd-select-text-input']"
 
     # image ='C:/Users/befor/Downloads/oraange.jpg'
     # file = 'C:/Users/befor/PycharmProjects/OpenCartV1_Selenium_Python/Book1.xlsx'
@@ -74,6 +78,21 @@ class PimPage:
             time.sleep(1)
             drop_down_element.send_keys(Keys.RETURN)
             time.sleep(1)
+    def berichteAn(self, Bericht):
+        self.driver.find_element(By.XPATH, self.link_reportTo_xpath).click()
+        self.driver.find_element(By.XPATH, self.btn_managerAdd_xpath).click()
+        managerin = self.driver.find_element(By.XPATH, self.input_manager_xpath)
+        managerin.send_keys(Bericht)
+        time.sleep(1)
+        managerin.send_keys(Keys.DOWN)
+        time.sleep(1)
+        managerin.submit()
+        managerName = self.driver.find_element(By.XPATH, self.dropdown_reportMethod_xpath)
+        managerName.click()
+        managerName.send_keys(Keys.DOWN)
+        time.sleep(1)
+        managerName.send_keys(Keys.ENTER)
+
 
 
 
