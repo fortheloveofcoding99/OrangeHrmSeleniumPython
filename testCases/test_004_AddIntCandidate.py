@@ -22,9 +22,9 @@ class Test_004_AddIntCandidate(BaseClass):
         self.db = Dashboard(self.driver)  # creating an object of the dashboard page class and passing the driver method
         self.db.clickRecruitmentTab()
         self.rp = RecPage(self.driver) # creating an object of the recruitment page class and passing the driver method
-        self.rp.hinzfugenKandidate(getData[0],getData[1],getData[2]) # paasing the data from the getData method
+        self.rp.hinzfugenKandidate(getData['vornam'],getData['nacnam'],getData['emaild']) # paasing the data from the getData method
         self.driver.close()
 
-    @pytest.fixture(params=[('Karim','Benzema','benzema@fifa.com'),('Didier','Drogba','drogba@fifa.com')]) # adding elements in the list to be passed into the test case
+    @pytest.fixture(params=[{'vornam':'Karim','nacnam':'Benzema','emaild':'benzema@fifa.com'},{'vornam':'Didier','nacnam':'Drogba','emaild':'drogba@fifa.com'}]) # adding elements in the dictionary to be passed into the test case
     def getData(self,request):
         return request.param

@@ -7,6 +7,7 @@ from selenium import webdriver
 from selenium.webdriver.common.keys import Keys
 
 class PimPage:
+    global ausweisId
     btn_add_xpath = "//button[text()=' Add ']"
     input_vorName_name = "firstName"
     input_zweiterVorName_name = "middleName"
@@ -26,6 +27,12 @@ class PimPage:
     btn_managerAdd_xpath = "(//button[@type='button'])[2]"
     input_manager_xpath = "//input[@placeholder='Type for hints...']"
     dropdown_reportMethod_xpath = "//div[@class='oxd-select-text-input']"
+    table_empIds_xpath = "//div[@class='oxd-table-body']//div[2]"
+    table_empId_xpath = "//div[@class='oxd-table-body']//div[1]//div[2]"
+    table_empCheckBox_xpath = "//div[@class='oxd-table-body']//div[1]//div//div//div"
+    table_allEmps_xpath = "//i[@class='oxd-icon bi-check oxd-checkbox-input-icon']"
+    btn_allesLoschen_xpath = "//i[@class='oxd-icon bi-trash-fill oxd-button-icon']"
+    btn_LoschenBestatigen_xpath = "//i[@class='oxd-icon bi-trash oxd-button-icon']"
 
     # image ='C:/Users/befor/Downloads/oraange.jpg'
     # file = 'C:/Users/befor/PycharmProjects/OpenCartV1_Selenium_Python/Book1.xlsx'
@@ -50,6 +57,8 @@ class PimPage:
     def hinzfugenAngstellterId(self, ausweis):
         self.driver.find_element(By.XPATH, self.input_angstellterId_xpath).clear()
         self.driver.find_element(By.XPATH,self.input_angstellterId_xpath).send_keys(ausweis)
+        time.sleep(1)
+ #       ausweisId = self.driver.find_element(By.XPATH,self.input_angstellterId_xpath).text
 
     def hinzfugenFoto(self,image):
         self.driver.find_element(By.XPATH,self.input_image_xpath).send_keys(image)
@@ -92,6 +101,16 @@ class PimPage:
         managerName.send_keys(Keys.DOWN)
         time.sleep(1)
         managerName.send_keys(Keys.ENTER)
+
+    def entfernenAngstellter(self):
+        mitarbeiterInsgesamt = len(self.driver.find_elements(By.XPATH,self.table_empIds_xpath))
+        print('Total emps:',mitarbeiterInsgesamt)
+        self.driver.find_element(By.XPATH, self.table_allEmps_xpath).click()
+        self.driver.find_element(By.XPATH,self.btn_allesLoschen_xpath).click()
+        self.driver.find_element(By.XPATH,self.btn_LoschenBestatigen_xpath).click()
+        time.sleep(3)
+        self.driver.close()
+
 
 
 

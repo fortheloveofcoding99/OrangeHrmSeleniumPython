@@ -24,5 +24,6 @@ class RecPage:
         self.driver.find_element(By.XPATH,self.input_email_xpath).send_keys(emaila)
         self.driver.find_element(By.XPATH,self.checkBox_zustimmung_xpath).click()
         self.driver.find_element(By.XPATH,self.btn_erstenSave_xpath).click()
-        time.sleep(3)
+        time.sleep(4)
+        self.driver.close()
 

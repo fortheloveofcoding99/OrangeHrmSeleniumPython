@@ -13,8 +13,8 @@ class BaseClass:
          logger = logging.getLogger(loggerName)
          fileHandlr=logging.FileHandler('logfile.log') # where all the logfile will be saved
          formatter = logging.Formatter('%(asctime)s :%(levelname)s :%(name)s :%(message)s') #format to print
-         fileHandlr.setFormatter(formatter)
-         logger.addHandler(fileHandlr)
+         fileHandlr.setFormatter(formatter) #casting the formatter to fileHandlr
+         logger.addHandler(fileHandlr) # casting the filehandler to logger
          logger.setLevel(logging.INFO) # setting the level of logging
          return logger
 
@@ -25,3 +25,7 @@ class BaseClass:
     def selectOptionByText(self,loc,text):
         sel = Select(loc)
         sel.select_by_visible_text(text)
+
+    def scrollDownByElement(self,loc):
+        ele = driver.find_element(By.XPATH,loc)
+        self.driver.execute_script('arguments[0].scrollIntoView();',ele)

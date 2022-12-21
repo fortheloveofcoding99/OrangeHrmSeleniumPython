@@ -27,3 +27,11 @@
 2022-12-09 08:22:06,146 :INFO :test_forgot_password :$$$forgot Password test case started$$$
 2022-12-09 08:22:17,796 :INFO :test_forgot_password :$$$forgot password test case ended$$$
 2022-12-12 13:26:20,160 :INFO :test_addEmployee :<selenium.webdriver.remote.webelement.WebElement (session="dbd3f8f0e07103f80afd1c9c72a9c181", element="76e0f09f-cd06-4b20-a85e-4070f130f7ef")>
+2022-12-21 12:02:09,850 :INFO :test_login :$$$login test case started$$$
+2022-12-21 12:02:16,435 :INFO :test_login :$$$login test case ended$$$
+2022-12-21 12:02:19,884 :INFO :test_forgot_password :$$$forgot Password test case started$$$
+2022-12-21 12:02:38,902 :INFO :test_forgot_password :$$$forgot password test case ended$$$
+2022-12-21 13:10:27,867 :INFO :test_login :$$$login test case started$$$
+2022-12-21 13:10:33,210 :INFO :test_login :$$$login test case ended$$$
+2022-12-21 13:10:36,702 :INFO :test_forgot_password :$$$forgot Password test case started$$$
+2022-12-21 13:10:47,101 :INFO :test_forgot_password :$$$forgot password test case ended$$$

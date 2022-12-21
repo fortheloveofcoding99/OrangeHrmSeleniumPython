@@ -4,14 +4,16 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="12d61acc-4490-47e5-89f9-10eef5039175" name="Changes" comment="added dropdowns for 2nd test case">
-      <change afterPath="$PROJECT_DIR$/pageObjects/RecruitmentPage.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/testCases/reports/18-12-2022 14-17-26.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/testCases/test_004_AddIntCandidate.py" afterDir="false" />
+    <list default="true" id="12d61acc-4490-47e5-89f9-10eef5039175" name="Changes" comment="added 4th test case interview candidate passing data through pytest fixtures">
+      <change afterPath="$PROJECT_DIR$/testCases/test_005_removeEmp.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pageObjects/Dashboard.py" beforeDir="false" afterPath="$PROJECT_DIR$/pageObjects/Dashboard.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/logfile.log" beforeDir="false" afterPath="$PROJECT_DIR$/logfile.log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pageObjects/PimPage.py" beforeDir="false" afterPath="$PROJECT_DIR$/pageObjects/PimPage.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/testCases/test_002_AddEmployee.py" beforeDir="false" afterPath="$PROJECT_DIR$/testCases/test_002_AddEmployee.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pageObjects/RecruitmentPage.py" beforeDir="false" afterPath="$PROJECT_DIR$/pageObjects/RecruitmentPage.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/testCases/conftest.py" beforeDir="false" afterPath="$PROJECT_DIR$/testCases/conftest.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/testCases/reports/18-12-2022 14-17-26.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/testCases/test_004_AddIntCandidate.py" beforeDir="false" afterPath="$PROJECT_DIR$/testCases/test_004_AddIntCandidate.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/utilities/BaseClass.py" beforeDir="false" afterPath="$PROJECT_DIR$/utilities/BaseClass.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -27,6 +29,17 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/utilities/BaseClass.py" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/testCases/conftest.py" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/pageObjects/Dashboard.py" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/testCases/test_002_AddEmployee.py" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/utilities/readProperties.py" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/pageObjects/RecruitmentPage.py" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/testCases/test_004_AddIntCandidate.py" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/utilities/customLogger.py" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/pageObjects/PimPage.py" root0="SKIP_INSPECTION" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -44,7 +57,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/testCases/test_001_AdminLogin.py" />
-    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
+    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -196,7 +209,14 @@
       <option name="project" value="LOCAL" />
       <updated>1671161874815</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="added 4th test case interview candidate passing data through pytest fixtures">
+      <created>1671353662007</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1671353662007</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="UnknownFeatures">
@@ -226,6 +246,7 @@
     <MESSAGE value="base class optimising browser settings from conf test and base class" />
     <MESSAGE value="adding explicit wait utility" />
     <MESSAGE value="added dropdowns for 2nd test case" />
-    <option name="LAST_COMMIT_MESSAGE" value="added dropdowns for 2nd test case" />
+    <MESSAGE value="added 4th test case interview candidate passing data through pytest fixtures" />
+    <option name="LAST_COMMIT_MESSAGE" value="added 4th test case interview candidate passing data through pytest fixtures" />
   </component>
 </project>
